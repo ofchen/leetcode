@@ -1,6 +1,6 @@
-package another;
+package LeetCode.another;
 
-//µ•ª˙Ω¯≥Ãµ˜∂»£¨≤ªÕ¨Ω¯≥Ãº‰≤ªª•»›£¨∂ØÃ¨πÊªÆ£øÕº‘⁄Visio-µ˜∂» £¨ƒ—µ„‘⁄±£¥Ê¡Ω∏ˆindex÷µº∞µ›πÈ≥ˆø⁄
+//ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÃµÔøΩÔøΩ»£ÔøΩÔøΩÔøΩÕ¨ÔøΩÔøΩÔøΩÃº‰≤ªÔøΩÔøΩÔøΩ›£ÔøΩÔøΩÔøΩÃ¨ÔøΩÊªÆÔøΩÔøΩÕºÔøΩÔøΩVisio-ÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩ—µÔøΩÔøΩ⁄±ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩindex÷µÔøΩÔøΩÔøΩ›πÔøΩÔøΩÔøΩÔøΩ
 public class TimeSchedule {
 	public static int tSchedule(int[] endTime, int[] dur, int[] values, int index, int ltindex,int price){
 		System.out.println("func index="+ index +" ltindex="+ ltindex + " value= "+ price);
@@ -20,9 +20,9 @@ public class TimeSchedule {
 					index1 = j;
 			}
 			System.out.println("\t A ~~~~~~~~~");
-			int A = tSchedule(endTime, dur, values, index1, index, price+values[index]);//—°‘Òœ¬±ÍŒ™indexµƒ»ŒŒÒ
+			int A = tSchedule(endTime, dur, values, index1, index, price+values[index]);//—°ÔøΩÔøΩÔøΩ¬±ÔøΩŒ™indexÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ
 			System.out.println("\t B~~~~~~~~~~");
-			int B = tSchedule(endTime, dur, values, index-1, ltindex, price);//≤ª—°œ¬±ÍŒ™indexµƒ»ŒŒÒ
+			int B = tSchedule(endTime, dur, values, index-1, ltindex, price);//ÔøΩÔøΩ—°ÔøΩ¬±ÔøΩŒ™indexÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ
 			int pr = (A >= B ? A : B);
 			System.out.println("result A B ="+ pr);
 			return pr;
@@ -41,6 +41,6 @@ public class TimeSchedule {
 		//long endTime = System.currentTimeMillis();
 		
 		//System.out.println("result="+ result[0]+" "+result[1]);
-		//System.out.println("≥Ã–Ú‘À–– ±º‰£∫" + (endTime - startTime) + "ms");//≥Ã–Ú‘À–– ±º‰Ωœ∂Ã£¨<1ms
+		//System.out.println("ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ±ÔøΩ‰£∫" + (endTime - startTime) + "ms");//ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ±ÔøΩÔøΩœ∂Ã£ÔøΩ<1ms
 	}
 }

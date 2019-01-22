@@ -1,7 +1,8 @@
-package another;
+package LeetCode.another;
 
 public class IntervalSummation {
-/*
+//�ҵ������в��������ֵ�����
+	/*
 	public static int intervalSummation(int[]arr, int index, int sum){
 		System.out.println("index= "+ index + " Sum = " + sum);
 		if(index == 1)
@@ -10,9 +11,9 @@ public class IntervalSummation {
 			return sum + arr[0];
 		else{
 			System.out.println("\t A ~~~~~~~~~");
-			int A = intervalSummation(arr, index-2, sum+arr[index]);//ѡ��arr[index]
+			int A = intervalSummation(arr, index-2, sum+arr[index]);//ѡ��arr[index]
 			System.out.println("\t B ~~~~~~~~~");
-			int B = intervalSummation(arr, index-1, sum);//��ѡarr[index]
+			int B = intervalSummation(arr, index-1, sum);//��ѡarr[index]
 					
 			int pr = (A >= B ? A : B);
 			System.out.println("result A B ="+ pr);
@@ -20,7 +21,7 @@ public class IntervalSummation {
 		}
 	}
 */
-	//�ݹ鷽ʽ
+	//�ݹ鷽ʽ
 	public static int intervalSummation(int[]arr, int index){
 		if(index == 1)
 			return (arr[0] >= arr[1] ? arr[0] : arr[1]);
@@ -28,9 +29,9 @@ public class IntervalSummation {
 			return arr[0];
 		else{
 			System.out.println("\t A ~~~~~~~~~");
-			int A = intervalSummation(arr, index-2)+arr[index];//ѡ��arr[index]
+			int A = intervalSummation(arr, index-2)+arr[index];//ѡ��arr[index]
 			System.out.println("\t B ~~~~~~~~~");
-			int B = intervalSummation(arr, index-1);//��ѡarr[index]
+			int B = intervalSummation(arr, index-1);//��ѡarr[index]
 					
 			int pr = (A >= B ? A : B);
 			System.out.println("result A B ="+ pr);
@@ -38,7 +39,7 @@ public class IntervalSummation {
 		}
 	}
 	
-	//�ǵݹ鷽ʽ
+	//�ǵݹ鷽ʽ
 	public static int intervalSummationArray(int[]arr){
 		int len = arr.length;
 		int[] res = new int[len]; 

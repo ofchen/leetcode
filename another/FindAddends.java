@@ -1,26 +1,27 @@
-package another;
+package LeetCode.another;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FindAddends {
-
-	//µÝ¹é·½Ê½
+//ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ÍµÄ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+	//ï¿½Ý¹é·½Ê½
 	public static boolean findAddends(int[] arr, int target, int index){
 		if(target == 0)
 			return true;
 		else if(index == 0)
 			return arr[index] == target;
-		else if(arr[index] > target)  //¼õÉÙÅÐ¶ÏµÄ·ÖÖ§ÊýÁ¿£¬±£Ö¤target>0
+		else if(arr[index] > target)  //ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ÏµÄ·ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤target>0
 			return  findAddends(arr, target, index-1);
 		else {
-			boolean A = findAddends(arr, target-arr[index], index-1); //Ñ¡Ôñarr[index]
-			boolean B = findAddends(arr, target, index-1); //²»Ñ¡arr[index]
+			boolean A = findAddends(arr, target-arr[index], index-1); //Ñ¡ï¿½ï¿½arr[index]
+			boolean B = findAddends(arr, target, index-1); //ï¿½ï¿½Ñ¡arr[index]
 			return (A | B);
 		}
 		
 	}
 	
-	//·ÇµÝ¹é·½Ê½
+	//ï¿½ÇµÝ¹é·½Ê½
 	public static boolean findAddendsArray(int[] arr, int target){
 		int al = arr.length;		 
 		boolean[][] result = new boolean[al][target+1];
@@ -41,8 +42,8 @@ public class FindAddends {
 				//
 				else
 					result[i][j] = result[i-1][j-arr[i]] | result[i-1][j];
-				//result[i-1][j-arr[i]]Èç¹ûÑ¡Ôñ¸ÃÔªËØ£¬¿´Ç°Ò»¸öµÄ½á¹ûÊÇ·ñ´ïµ½ÒªÇó£¬¼´j-arr[i]
-				//result[i-1][j]Èç¹û²»Ñ¡¸ÃÔªËØ£¬Ò²¿´Ç°Ò»¸öµÄ½á¹ûÊÇ·ñ´ïµ½ÒªÇó£¬¼´i-1
+				//result[i-1][j-arr[i]]ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½Ç°Ò»ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½Ç·ï¿½ïµ½Òªï¿½ó£¬¼ï¿½j-arr[i]
+				//result[i-1][j]ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ôªï¿½Ø£ï¿½Ò²ï¿½ï¿½Ç°Ò»ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½Ç·ï¿½ïµ½Òªï¿½ó£¬¼ï¿½i-1
 			}
 		}
 		
@@ -57,7 +58,7 @@ public class FindAddends {
 		//Arrays.sort(nums);
 		//nums = Arrays.copyOf(nums, nums.length);
 		//System.out.println(nums.toString());
-		boolean result = findAddends(nums, target, nums.length-1);
+		//-----------boolean result = findAddends(nums, target, nums.length-1);
 		//long endTime = System.currentTimeMillis();
 		
 		System.out.println("result="+ findAddendsArray(nums,target));
