@@ -1,11 +1,8 @@
-package medium;
+package LeetCode.medium;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Hashtable;
 import java.util.List;
-import java.util.Map;
-
+//Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¹ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½Ê¹ï¿½ÃµÝ¹ï¿½
 public class CombineSum {
 	public static List<Integer> ls = new ArrayList<Integer>();
 	public static void dfsComSum(int[] candidates, int target, int index, List<List<Integer>> result, List<Integer> list){
@@ -19,8 +16,8 @@ public class CombineSum {
 				    for (int i = index; i < candidates.length; i++){
 				    	if (candidates[i] > target) break;
 				    	list.add(candidates[i]);
-				    	dfsComSum(candidates, target- candidates[i], i, result, list);//Éî¶È±éÀú
-				    	list.remove(list.size() - 1);//»ØËÝ£¬Ê¹ÓÃÏÂÒ»¸öÊý×éÔªËØÖµ
+				    	dfsComSum(candidates, target- candidates[i], i, result, list);//ï¿½ï¿½È±ï¿½ï¿½ï¿½
+				    	list.remove(list.size() - 1);//ï¿½ï¿½ï¿½Ý£ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½Öµ
 				    }
 				}
 		
@@ -28,7 +25,6 @@ public class CombineSum {
 	
 	public static List<List<Integer>> combinationSum(int[] candidates, int target) {
 		
-	  int len = candidates.length;
 	   List<List<Integer>> result = new ArrayList<List<Integer>>();
 	   List<Integer> list = new ArrayList<Integer>();
 	   dfsComSum(candidates, target, 0, result, list);	   
