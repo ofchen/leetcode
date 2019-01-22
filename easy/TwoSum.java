@@ -1,4 +1,4 @@
-package easy;
+package LeetCode.easy;
 
 import java.util.Hashtable;
 import java.util.Map;
@@ -10,12 +10,12 @@ Example:
 	Because nums[0] + nums[1] = 2 + 7 = 9,
 	return [0, 1].
  
- 1.±©Á¦ËÑË÷
- 	Ê±¼ä¸´ÔÓ¶Èn^2,¿Õ¼ä¸´ÔÓ¶Èn
+ 1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ 	Ê±ï¿½ä¸´ï¿½Ó¶ï¿½n^2,ï¿½Õ¼ä¸´ï¿½Ó¶ï¿½n
  2.HashTable
- 	Ê±¼ä¸´ÔÓ¶Èn,¿Õ¼ä¸´ÔÓ¶Èn
- 3.HashTable ±ß½¨±í±ßÅÐ¶Ï
- 	Ê±¼ä¸´ÔÓ¶Èn,¿Õ¼ä¸´ÔÓ¶Èn
+ 	Ê±ï¿½ä¸´ï¿½Ó¶ï¿½n,ï¿½Õ¼ä¸´ï¿½Ó¶ï¿½n
+ 3.HashTable ï¿½ß½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
+ 	Ê±ï¿½ä¸´ï¿½Ó¶ï¿½n,ï¿½Õ¼ä¸´ï¿½Ó¶ï¿½n
  */
 
 public class TwoSum {
@@ -69,6 +69,6 @@ public class TwoSum {
 		//long endTime = System.currentTimeMillis();
 		
 		System.out.println("result="+ result[0]+" "+result[1]);
-		//System.out.println("³ÌÐòÔËÐÐÊ±¼ä£º" + (endTime - startTime) + "ms");//³ÌÐòÔËÐÐÊ±¼ä½Ï¶Ì£¬<1ms
+		//System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º" + (endTime - startTime) + "ms");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ï¶Ì£ï¿½<1ms
 	}
 }
